@@ -1,0 +1,6 @@
+{
+  "name": "LegalLens",
+  "description": "Understand your legal documents before you sign with AI-powered clause analysis, source-grounded answers, risk reviews, and comparison.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

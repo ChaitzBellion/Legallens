@@ -1,0 +1,52 @@
+EMPLOYMENT OFFER & AGREEMENT (FICTIONAL DEMO)
+NOTICE: THIS IS A FICTIONAL SAMPLE DOCUMENT CREATED SOLELY FOR DEMO AND COMPARISON PURPOSES.
+
+Date: October 15, 2026
+To: Alex Morgan
+From: Beacon Global Systems LLC, 100 Wall Street, New York, NY 10005
+
+Dear Alex,
+Beacon Global Systems LLC ("Beacon" or "Company") is delighted to extend this formal offer of employment for the position of Lead Cloud Architect.
+
+1. POSITION AND WORKING ARRANGEMENT
+1.1 Position: Lead Cloud Architect, reporting to the Chief Technology Officer.
+1.2 Working Arrangement: Fully remote within the United States, with periodic travel to New York headquarters approximately four (4) times per year for architectural summits.
+1.3 Hours: Full-time exempt salaried position, standard 40 hours per week schedule.
+
+2. COMPENSATION AND BONUS
+2.1 Base Salary: An annual base salary of $185,000 USD, payable bi-weekly.
+2.2 Guaranteed & Performance Bonus: Guaranteed bonus of $18,500 (10% of base salary) for the first year of employment, payable at the end of month 12. In subsequent years, variable bonus of 10% to 20% based on transparent platform reliability and uptime metrics.
+2.3 Equity Incentive: Option grant to purchase 15,000 common shares of Beacon Global Systems LLC, vesting over a four-year period with a one-year cliff (25% at month 12, then monthly thereafter).
+
+3. PROBATION AND NOTICE PERIOD
+3.1 Probationary Period: Six (6) months (180 calendar days) from commencement date.
+3.2 Notice Period: Ninety (90) calendar days' written notice required by either party to terminate employment, whether during or after the probationary period.
+
+4. BENEFITS AND TIME OFF
+4.1 Health Care: 100% employer-paid premiums for medical, vision, and dental insurance for employee and eligible dependents.
+4.2 401(k) Match: Immediate 100% employer match up to 5% of salary, vested immediately.
+4.3 Unlimited Flexible Time Off: Discretionary flexible PTO policy (encouraged minimum 20 days annually) plus 12 national holidays.
+
+5. INTELLECTUAL PROPERTY & MOONLIGHTING
+5.1 Inventions Assignment: Employee assigns inventions conceived strictly during working hours or using Company cloud accounts and equipment.
+5.2 Carve-out: Explicit exclusion for personal side-projects and pre-existing open-source contributions, provided they are developed outside work hours, without company equipment, and do not relate to multi-cloud container orchestration software.
+
+6. RESTRICTIVE COVENANTS
+6.1 Non-Compete: Restricted for six (6) months post-employment, strictly limited to direct commercial multi-cloud orchestration competitors.
+6.2 Non-Solicitation: Nine (9) months non-solicitation of direct engineering team members.
+
+7. TERMINATION AND SEVERANCE
+7.1 Severance: In the event of termination without cause, Company provides three (3) months' base salary severance plus three (3) months COBRA coverage upon execution of standard mutual release.
+7.2 For Cause: Immediate termination without severance for gross negligence, willful misconduct, or unauthorized breach of customer data.
+
+8. GOVERNING LAW AND JURISDICTION
+8.1 Governing Law: State of New York.
+8.2 Jurisdiction: State or federal courts situated in New York County, New York. Mutual waiver of jury trial.
+
+Sincerely,
+BEACON GLOBAL SYSTEMS LLC
+By: /s/ Marcus Sterling, CTO
+
+Agreed & Accepted:
+By: /s/ Alex Morgan
+Date: October 18, 2026

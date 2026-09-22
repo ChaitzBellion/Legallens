@@ -1,0 +1,56 @@
+EMPLOYMENT AGREEMENT (FICTIONAL DEMO)
+NOTICE: THIS IS A FICTIONAL SAMPLE DOCUMENT CREATED SOLELY FOR DEMO AND EVALUATION PURPOSES.
+
+This EMPLOYMENT AGREEMENT (the "Agreement") is entered into as of October 1, 2026, by and between:
+EMPLOYER: Apex Technologies Inc., a Delaware corporation having its principal office at 500 Market Street, Suite 1200, San Francisco, CA 94105 ("Company"), and
+EMPLOYEE: Alex Morgan, an individual residing at 742 Evergreen Terrace, San Francisco, CA 94110 ("Employee").
+
+1. POSITION AND DUTIES
+1.1 Title and Reporting: The Company agrees to employ Employee in the position of Senior Software Engineer, reporting to the VP of Engineering.
+1.2 Location: Employee will perform duties primarily from the Company's San Francisco office on a hybrid schedule (minimum of three (3) designated days per week in-office) and remotely on remaining business days.
+1.3 Working Hours: This is an exempt full-time position requiring approximately 40 hours per week, with flexibility as reasonably required to meet project deliverables and release milestones.
+
+2. COMMENCEMENT AND PROBATION
+2.1 Start Date: Employment shall commence on November 2, 2026 (the "Start Date").
+2.2 Probationary Period: The first ninety (90) calendar days of employment shall constitute a probationary period ("Probation Period"). During this Probation Period, either party may terminate this Agreement by providing fourteen (14) calendar days' advance written notice, or payment of base salary in lieu thereof.
+
+3. COMPENSATION AND BENEFITS
+3.1 Base Salary: The Company shall pay Employee an annual base salary of $165,000 USD, payable in semi-monthly installments in accordance with the Company's standard payroll practices and subject to applicable tax withholdings.
+3.2 Variable Incentive Compensation: Employee shall be eligible to participate in the Company's Discretionary Annual Performance Bonus Plan with a target bonus opportunity of up to 15% of annual base salary. The actual bonus payout is subject to individual performance, company EBITDA targets, and final approval by the Board of Directors. To receive any bonus, Employee must remain actively employed and in good standing on the designated distribution date.
+3.3 Health and Welfare Benefits: Employee will be eligible for group health, dental, vision, and 401(k) retirement plans (with up to 4% employer matching after 6 months of service) pursuant to standard plan terms.
+3.4 Paid Time Off: Employee shall accrue paid time off ("PTO") at the rate of 1.5 days per month (eighteen (18) days per calendar year), subject to a maximum accrual cap of twenty-four (24) days. Employee is also entitled to ten (10) standard company holidays per year.
+
+4. CONFIDENTIALITY AND PROPRIETARY INFORMATION
+4.1 Duty of Confidentiality: During and indefinitely following employment, Employee shall not disclose, copy, publish, or use for personal gain or for any third party any Proprietary Information, customer lists, technical source code, trade secrets, financial models, or non-public business strategies of the Company without prior written authorization.
+4.2 Return of Property: Upon termination of employment for any reason, Employee shall immediately return all company-issued laptops, security badges, documents, data files, and any reproductions thereof.
+
+5. INTELLECTUAL PROPERTY ASSIGNMENT
+5.1 Assignment of Inventions: Employee agrees to assign and hereby irrevocably assigns to Company all right, title, and interest worldwide in and to all inventions, software code, algorithms, designs, documentation, and improvements ("Inventions") created, conceived, or authored by Employee during employment, whether during business hours or off-hours, if such Inventions relate to the Company's current or demonstrably anticipated business or products, or result from any work performed for the Company.
+5.2 Post-Termination Inventions: Any invention conceived by Employee within six (6) months following termination of employment that relates directly to the Company's proprietary systems shall be rebuttably presumed to have been conceived during employment and shall belong to the Company.
+
+6. RESTRICTIVE COVENANTS
+6.1 Non-Competition: During employment and for a period of twelve (12) consecutive months following the termination of employment for any reason, Employee covenants and agrees not to directly or indirectly engage in, perform services for, advise, invest in, or operate any business entity that competes directly with the core SaaS analytics products of the Company within a fifty (50) mile radius of San Francisco, California.
+6.2 Non-Solicitation of Employees and Clients: For twelve (12) months following termination, Employee shall not directly solicit, recruit, or attempt to induce any current employee or independent contractor of Company to terminate their relationship with the Company, nor solicit active customers of the Company for competing offerings.
+
+7. TERMINATION AND NOTICE
+7.1 Termination by Company For Cause: The Company may terminate employment immediately at any time without advance notice or severance pay for "Cause", defined as: (a) material breach of this Agreement; (b) willful misconduct, gross negligence, or fraud; (c) conviction of any felony or crime involving moral turpitude; or (d) continued failure to perform reasonable assigned duties after thirty (30) days' written notice and opportunity to cure.
+7.2 Termination Without Cause or Resignation: Following completion of the Probation Period, either party may terminate employment without cause by providing sixty (60) calendar days' prior written notice to the other party. The Company reserves the right, in its sole discretion, to accelerate the departure date by paying base salary in lieu of notice for the remaining balance of the notice period.
+7.3 Severance Eligibility: If Company terminates Employee without Cause and contingent upon Employee executing a comprehensive general release of claims in favor of Company, Company shall provide severance pay equal to two (2) months of base salary plus continuation of health benefits under COBRA for two (2) months.
+
+8. GOVERNING LAW AND DISPUTE RESOLUTION
+8.1 Governing Law: This Agreement shall be governed by and construed in accordance with the substantive laws of the State of California, without regard to conflict of laws principles.
+8.2 Mandatory Arbitration: Any dispute, claim, or controversy arising out of or relating to this Agreement, employment, or termination thereof shall be resolved exclusively through final and binding individual arbitration administered by the American Arbitration Association (AAA) in San Francisco, California. Both parties expressly waive any right to bring or participate in a class, collective, or representative action.
+
+9. ENTIRE AGREEMENT AND AMENDMENTS
+9.1 Integration: This Agreement constitutes the complete and exclusive agreement between the parties regarding employment terms and supersedes all prior verbal or written understandings, negotiations, or offer letters.
+9.2 Amendments: No modification or amendment of this Agreement shall be valid unless executed in writing and signed by both Employee and an authorized executive officer of the Company.
+
+IN WITNESS WHEREOF, the parties have executed this Employment Agreement as of the date first above written.
+
+APEX TECHNOLOGIES INC.
+By: /s/ Elena Vance, Chief Executive Officer
+Date: October 1, 2026
+
+EMPLOYEE
+By: /s/ Alex Morgan
+Date: October 2, 2026

@@ -1,0 +1,111 @@
+import assert from 'node:assert';
+import {
+  validateDocumentFile,
+  extractTextFromBuffer,
+  sanitizeFilename,
+} from '../server/documentParser.js';
+import {
+  DEMO_DOCUMENT_A_NAME,
+  DEMO_DOCUMENT_A_TEXT,
+  DEMO_DOCUMENT_B_NAME,
+  DEMO_DOCUMENT_B_TEXT,
+  ALL_TEST_CASE_DOCUMENTS,
+} from '../server/sampleDocuments.js';
+
+console.log('--- Starting LegalLens Core Verification Tests ---');
+
+// Test 1: Filename Sanitization
+console.log('Test 1: Filename Sanitization');
+{
+  const unsafe = '../../etc/passwd..//sensitive<file>.pdf';
+  const clean = sanitizeFilename(unsafe);
+  assert(!clean.includes('..'), 'Must strip path traversal sequences');
+  assert(!clean.includes('<'), 'Must strip illegal characters');
+  assert(!clean.includes('>'), 'Must strip illegal characters');
+  assert(clean.endsWith('.pdf'), 'Preserves legitimate extension');
+  console.log('✓ Filename sanitization passed.');
+}
+
+// Test 2: File Validation Logic
+console.log('Test 2: File Validation Logic');
+{
+  // Valid text file
+  const validFile: any = {
+    originalname: 'offer_letter.txt',
+    size: 2048,
+    mimetype: 'text/plain',
+  };
+  const v1 = validateDocumentFile(validFile);
+  assert.strictEqual(v1.isValid, true, 'Valid text file should pass validation');
+
+  // Executable file should be rejected
+  const exeFile: any = {
+    originalname: 'malware.exe',
+    size: 1024,
+    mimetype: 'application/x-msdownload',
+  };
+  const v2 = validateDocumentFile(exeFile);
+  assert.strictEqual(v2.isValid, false, 'EXE file must be rejected');
+
+  // File over 10MB should be rejected
+  const hugeFile: any = {
+    originalname: 'huge_document.pdf',
+    size: 12 * 1024 * 1024,
+    mimetype: 'application/pdf',
+  };
+  const v3 = validateDocumentFile(hugeFile);
+  assert.strictEqual(v3.isValid, false, 'Files over 10MB must be rejected');
+
+  // Empty file should be rejected
+  const emptyFile: any = {
+    originalname: 'empty.pdf',
+    size: 0,
+    mimetype: 'application/pdf',
+  };
+  const v4 = validateDocumentFile(emptyFile);
+  assert.strictEqual(v4.isValid, false, 'Empty files must be rejected');
+
+  console.log('✓ File validation passed.');
+}
+
+// Test 3: Text Buffer Extraction (Plain Text)
+console.log('Test 3: Plain text buffer extraction');
+async function testExtraction() {
+  const sampleContent = 'EMPLOYMENT AGREEMENT\n\nThis agreement is made between Apex Tech and Jane Doe.\nBase Salary: $165,000.\nNotice period: 60 days.';
+  const buffer = Buffer.from(sampleContent, 'utf-8');
+
+  const result = await extractTextFromBuffer(buffer, 'agreement.txt', 'text/plain');
+  assert.strictEqual(result.name, 'agreement.txt');
+  assert(result.text.includes('Jane Doe'), 'Extracted text must contain Jane Doe');
+  assert(result.text.includes('60 days'), 'Extracted text must contain notice period');
+  assert.strictEqual(result.wordCount > 10, true, 'Word count accurately calculated');
+  console.log('✓ Plain text extraction passed.');
+}
+
+// Test 4: Demo Sample Documents Integrity
+console.log('Test 4: Sample Documents Integrity');
+{
+  assert(DEMO_DOCUMENT_A_TEXT.length > 500, 'Demo Document A has full legal content');
+  assert(DEMO_DOCUMENT_A_TEXT.includes('Apex Technologies'), 'Demo Document A specifies Apex Technologies');
+  assert(DEMO_DOCUMENT_A_TEXT.includes('7.2') || DEMO_DOCUMENT_A_TEXT.includes('8.2'), 'Demo Document A has section references');
+  assert(DEMO_DOCUMENT_B_TEXT.includes('Beacon Global Systems'), 'Demo Document B specifies Beacon Global Systems');
+  
+  // Test 5: Verify all 6 test cases
+  assert.strictEqual(ALL_TEST_CASE_DOCUMENTS.length, 6, 'Should provide 6 test case documents');
+  const ids = ALL_TEST_CASE_DOCUMENTS.map(tc => tc.id);
+  assert(ids.includes('demoA') && ids.includes('demoB') && ids.includes('demoC') && ids.includes('demoD') && ids.includes('demoE') && ids.includes('demoF'), 'All 6 test IDs present');
+  ALL_TEST_CASE_DOCUMENTS.forEach(tc => {
+    assert(tc.title && tc.title.length > 0, 'Test case has title');
+    assert(tc.text && tc.text.length > 200, 'Test case has substantial contract text');
+    assert(tc.keyProvisionsToInspect && tc.keyProvisionsToInspect.length > 0, 'Test case has key provisions to inspect');
+  });
+  console.log('✓ All 6 test case documents verified.');
+}
+
+// Run async tests
+testExtraction().then(() => {
+  console.log('--- All LegalLens Core Verification Tests Passed Successfully! ---');
+}).catch((err) => {
+  console.error('Test failed:', err);
+  process.exit(1);
+});

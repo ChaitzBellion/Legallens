@@ -1,0 +1,52 @@
+MUTUAL NON-DISCLOSURE AGREEMENT (FICTIONAL DEMO)
+NOTICE: THIS IS A FICTIONAL SAMPLE DOCUMENT CREATED SOLELY FOR DEMO AND EVALUATION PURPOSES.
+
+This Mutual Non-Disclosure Agreement ("Agreement") is made and entered into as of November 10, 2026 ("Effective Date"), by and between:
+PARTY A: Horizon Robotics Inc., a California corporation with offices at 1400 Innovation Way, San Jose, CA 95134 ("Horizon"), and
+PARTY B: Quantum Labs AI LLC, a Washington limited liability company with offices at 2200 Pine Street, Seattle, WA 98101 ("Quantum").
+Each party may disclose ("Disclosing Party") or receive ("Receiving Party") confidential information.
+
+1. PURPOSE OF DISCLOSURE
+The parties wish to explore a potential strategic business collaboration regarding autonomous navigation neural models and edge sensor integration (the "Permitted Purpose").
+
+2. DEFINITION OF CONFIDENTIAL INFORMATION
+"Confidential Information" means any proprietary, technical, commercial, financial, or product roadmap information disclosed by Disclosing Party to Receiving Party, whether in writing, orally, electronically, or visually, that is marked as "Confidential", "Proprietary", or that by its nature reasonably ought to be understood as confidential. Confidential Information includes source code, neural network weights, sensor schematics, customer lists, pricing data, and benchmark results.
+
+3. EXCLUSIONS FROM CONFIDENTIAL INFORMATION
+Confidential Information shall not include information that:
+(a) is or becomes publicly available without breach of this Agreement by Receiving Party;
+(b) was already rightfully known to Receiving Party without confidentiality restriction prior to disclosure;
+(c) is independently developed by Receiving Party without reference to or use of Disclosing Party's Confidential Information; or
+(d) is rightfully received from a third party who has no duty of confidentiality to Disclosing Party.
+
+4. OBLIGATIONS OF RECEIVING PARTY
+4.1 Standard of Care: Receiving Party agrees to protect Confidential Information using at least the same degree of care it uses for its own confidential information of like sensitivity, but in no event less than a reasonable degree of care.
+4.2 Limited Access: Receiving Party shall restrict access strictly to its employees, contractors, and legal/financial advisors who have a need to know for the Permitted Purpose and who are bound by confidentiality obligations at least as restrictive as this Agreement.
+4.3 No Reverse Engineering: Receiving Party shall not decompile, disassemble, or reverse-engineer any software, prototypes, or hardware delivered hereunder.
+
+5. COMPELLED DISCLOSURE
+If Receiving Party is legally required by court order, subpoena, or regulatory agency to disclose Confidential Information, it shall provide prompt written notice to Disclosing Party (where legally permissible) to allow Disclosing Party to seek a protective order, and shall disclose only that portion legally mandated.
+
+6. TERM AND TERMINATION
+6.1 Term of Agreement: This Agreement shall govern disclosures made within one (1) year from the Effective Date.
+6.2 Duration of Confidentiality: The obligations of confidentiality and non-use shall survive termination and remain in effect for three (3) years from the date of disclosure; provided that for trade secrets and core proprietary source code, obligations shall continue indefinitely until such information loses trade secret status through no fault of Receiving Party.
+6.3 Return or Destruction: Within thirty (30) calendar days of written request by Disclosing Party, Receiving Party shall securely destroy or return all copies of Confidential Information and certify compliance in writing.
+
+7. NO LICENSE OR WARRANTY
+Nothing herein grants any patent, copyright, trademark, or commercial license. All information is provided "AS IS" without warranties of accuracy, completeness, or non-infringement.
+
+8. REMEDIES AND EQUITABLE RELIEF
+The parties acknowledge that unauthorized disclosure may cause irreparable harm for which monetary damages would be inadequate. Disclosing Party shall be entitled to seek injunctive relief and specific performance in addition to all other legal remedies.
+
+9. GOVERNING LAW
+This Agreement shall be governed by the laws of the State of California, without regard to conflicts of law rules. Exclusive jurisdiction shall lie in Santa Clara County, California.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement.
+
+HORIZON ROBOTICS INC.
+By: /s/ Dr. Kenji Sato, Chief Technology Officer
+Date: November 10, 2026
+
+QUANTUM LABS AI LLC
+By: /s/ Sarah Jenkins, VP of Partnerships
+Date: November 11, 2026
