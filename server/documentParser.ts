@@ -3,7 +3,6 @@ import { createRequire } from 'module';
 import path from 'path';
 
 const require = createRequire(path.join(process.cwd(), 'package.json'));
-const pdfParse = require('pdf-parse');
 
 export interface ExtractedDocument {
   name: string;
@@ -103,9 +102,15 @@ export async function extractTextFromBuffer(
 
   try {
     if (ext === '.pdf' || mimetype === 'application/pdf') {
-      const pdfData = await pdfParse(buffer);
-      text = pdfData.text || '';
-      pageCount = pdfData.numpages || undefined;
+      const { PDFParse } = require('pdf-parse') as typeof import('pdf-parse');
+      const parser = new PDFParse({ data: buffer });
+      try {
+        const pdfData = await parser.getText();
+        text = pdfData.text || '';
+        pageCount = pdfData.total || undefined;
+      } finally {
+        await parser.destroy();
+      }
     } else if (
       ext === '.docx' ||
       mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'

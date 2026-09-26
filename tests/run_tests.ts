@@ -81,6 +81,31 @@ async function testExtraction() {
   assert(result.text.includes('60 days'), 'Extracted text must contain notice period');
   assert.strictEqual(result.wordCount > 10, true, 'Word count accurately calculated');
   console.log('✓ Plain text extraction passed.');
+
+  const pdfText = 'Employment Agreement with salary and thirty days notice period.';
+  const pdfStream = `BT\n/F1 12 Tf\n72 720 Td\n(${pdfText}) Tj\nET`;
+  const pdfObjects = [
+    '<< /Type /Catalog /Pages 2 0 R >>',
+    '<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
+    '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>',
+    '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
+    `<< /Length ${Buffer.byteLength(pdfStream, 'ascii')} >>\nstream\n${pdfStream}\nendstream`,
+  ];
+  let pdfSource = '%PDF-1.4\n';
+  const offsets = [0];
+  for (const [index, object] of pdfObjects.entries()) {
+    offsets.push(Buffer.byteLength(pdfSource, 'ascii'));
+    pdfSource += `${index + 1} 0 obj\n${object}\nendobj\n`;
+  }
+  const xrefOffset = Buffer.byteLength(pdfSource, 'ascii');
+  pdfSource += `xref\n0 ${offsets.length}\n0000000000 65535 f \n`;
+  pdfSource += offsets.slice(1).map((offset) => `${String(offset).padStart(10, '0')} 00000 n \n`).join('');
+  pdfSource += `trailer\n<< /Size ${offsets.length} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`;
+
+  const pdfResult = await extractTextFromBuffer(Buffer.from(pdfSource, 'ascii'), 'agreement.pdf', 'application/pdf');
+  assert(pdfResult.text.includes('Employment Agreement'), 'PDF extraction must preserve document text');
+  assert.strictEqual(pdfResult.pageCount, 1, 'PDF extraction must return the page count');
+  console.log('✓ PDF text extraction passed.');
 }
 
 async function testApiHealthRoute() {
