@@ -33,6 +33,17 @@ LegalLens is **strictly an informational tool** and **never presents itself as a
 - **Parsing Engine**: In-memory parsing of PDF, Word (`.docx` via Mammoth), and plain text (`.txt`) documents without permanent disk persistence.
 - **Security**: Prompt injection defense using quarantined `<user_submitted_legal_document_content>` boundaries.
 
+### Deploying to Vercel
+
+The frontend is built as a Vite static site, and the existing Express API is exposed to Vercel through the `api/[...path].ts` serverless function. Vercel uses the checked-in `vercel.json` build settings.
+
+1. Import the repository into Vercel with the project root set to the repository root.
+2. In **Project Settings → Environment Variables**, add `GEMINI_API_KEY` with the key value and enable it for the **Production** environment (and Preview too, if needed). `APP_URL` is not required for Gemini analysis.
+3. Redeploy after changing environment variables; Vercel applies them to new deployments.
+4. Visit `https://<your-deployment-domain>/api/health`. A working API responds with JSON and reports `"hasGeminiKey": true`.
+
+Vercel Functions limit request bodies to 4.5 MB, so uploads larger than that platform limit may be rejected even though the local server accepts files up to 10 MB.
+
 ---
 
 ## 3. Key Features

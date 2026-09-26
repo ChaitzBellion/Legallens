@@ -1,4 +1,5 @@
 import assert from 'node:assert';
+import app from '../server/api.js';
 import {
   validateDocumentFile,
   extractTextFromBuffer,
@@ -82,6 +83,28 @@ async function testExtraction() {
   console.log('✓ Plain text extraction passed.');
 }
 
+async function testApiHealthRoute() {
+  const server = app.listen(0, '127.0.0.1');
+
+  try {
+    await new Promise<void>((resolve) => server.once('listening', resolve));
+    const address = server.address();
+    assert(address && typeof address !== 'string', 'API server should bind to a local port');
+
+    const response = await fetch(`http://127.0.0.1:${address.port}/api/health`);
+    assert.strictEqual(response.status, 200, 'Health route should respond successfully');
+
+    const health = await response.json();
+    assert.strictEqual(health.status, 'ok');
+    assert.strictEqual(typeof health.hasGeminiKey, 'boolean');
+    console.log('✓ API health route passed.');
+  } finally {
+    await new Promise<void>((resolve, reject) => {
+      server.close((error) => (error ? reject(error) : resolve()));
+    });
+  }
+}
+
 // Test 4: Demo Sample Documents Integrity
 console.log('Test 4: Sample Documents Integrity');
 {
@@ -103,7 +126,7 @@ console.log('Test 4: Sample Documents Integrity');
 }
 
 // Run async tests
-testExtraction().then(() => {
+Promise.all([testExtraction(), testApiHealthRoute()]).then(() => {
   console.log('--- All LegalLens Core Verification Tests Passed Successfully! ---');
 }).catch((err) => {
   console.error('Test failed:', err);
