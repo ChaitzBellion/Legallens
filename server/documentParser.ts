@@ -1,7 +1,8 @@
 import mammoth from 'mammoth';
 import { createRequire } from 'module';
+import path from 'path';
 
-const require = createRequire(import.meta.url);
+const require = createRequire(path.join(process.cwd(), 'package.json'));
 const pdfParse = require('pdf-parse');
 
 export interface ExtractedDocument {
